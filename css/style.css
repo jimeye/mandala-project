@@ -647,9 +647,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer {
-    background-color: #E8B4B8;
+    background-color: #F4D1D5;
     color: var(--color-text);
-    padding: 2px 0;
+    padding: 1px 0 0 0;
     margin-top: 0 !important;
 }
 
@@ -669,7 +669,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer__contact {
     margin-bottom: 0;
-    margin-top: 3rem;
+    margin-top: 0.2rem;
 }
 
 .footer__website {
