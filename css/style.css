@@ -22,10 +22,24 @@
 /* Styles spécifiques pour les carrousels avec marges forcées */
 .retraite-old-carousel {
     margin: 4px 0 0 0 !important;
+    /* Masquer les barres de défilement tout en gardant la fonctionnalité */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.retraite-old-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .cuisine-carousel {
     margin: 4px 0 0 0 !important;
+    /* Masquer les barres de défilement tout en gardant la fonctionnalité */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.cuisine-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .retraite-old-carousel > div {
