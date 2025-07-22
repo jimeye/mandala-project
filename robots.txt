@@ -17,3 +17,9 @@ Allow: /audio/
 Disallow: /convert-to-webp.sh
 Disallow: /download-images.sh
 Disallow: /PROJET-MANDALA.txt 
+
+# Disallow specific files
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+Disallow: /audio/ 
