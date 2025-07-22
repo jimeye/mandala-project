@@ -46,6 +46,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Flèche flottante pour remonter en haut de la page -->
+    <button id="scrollTopBtn" aria-label="Remonter en haut">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M12 5L6 11M12 5L18 11" stroke="#E8B4B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Navigation principale">
             <a href="index.html" class="nav__logo" aria-label="Accueil - Mandala Project">Mandala Project</a>
@@ -155,5 +161,25 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+      // Attendre que le DOM soit chargé
+      document.addEventListener('DOMContentLoaded', function() {
+        // Affiche la flèche si on scrolle, la cache sinon
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        
+        if (scrollTopBtn) {
+          window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) {
+              scrollTopBtn.style.display = 'block';
+            } else {
+              scrollTopBtn.style.display = 'none';
+            }
+          });
+          scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+      });
+    </script>
 </body>
 </html> 
