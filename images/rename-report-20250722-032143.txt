@@ -1,0 +1,31 @@
+Rapport de renommage - Tue Jul 22 03:21:43 CEST 2025
+=================================
+
+📁 Dossier: about
+-------------------
+  1. about-1.jpg → about-1.jpg
+  2. about-2.jpg → about-2.jpg
+
+📁 Dossier: cuisine
+-------------------
+  1. cuisine-1.jpg → cuisine-1.jpg
+  2. cuisine-2.jpg → cuisine-2.jpg
+  3. cuisine-3.jpg → cuisine-3.jpg
+
+📁 Dossier: hero
+-------------------
+  1. hero-bg.jpg → hero-1.jpg
+
+📁 Dossier: retraites
+-------------------
+  1. retraite-1.jpg → retraites-1.jpg
+  2. retraite-2.jpg → retraites-2.jpg
+  3. retraite-3.jpg → retraites-3.jpg
+
+📁 Dossier: villa
+-------------------
+  1. villa-1.jpg → villa-1.jpg
+  2. villa-2.jpg → villa-2.jpg
+  3. villa-3.jpg → villa-3.jpg
+  4. villa-4.jpg → villa-4.jpg
+

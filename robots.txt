@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mandala-project.com/sitemap.xml
+
+# Crawl-delay pour éviter de surcharger le serveur
+Crawl-delay: 1
+
+# Permettre l'accès aux ressources importantes
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /audio/
+
+# Bloquer l'accès aux fichiers de développement
+Disallow: /convert-to-webp.sh
+Disallow: /download-images.sh
+Disallow: /PROJET-MANDALA.txt 

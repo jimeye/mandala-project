@@ -1,0 +1,17 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Node modules (si jamais utilisé)
+node_modules/
+
+# Fichiers de sauvegarde
+*.bak
+*.backup 

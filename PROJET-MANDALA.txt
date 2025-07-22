@@ -1,0 +1,205 @@
+PROJET MANDALA - DOCUMENTATION COMPLÈTE
+========================================
+
+DESCRIPTION DU PROJET
+---------------------
+
+Site web statique pour "Mandala Project" - Retraites de yoga et méditation
+- Design responsive (desktop + mobile)
+- Pages : Accueil, À propos, Retraites (Inde + Ibiza), Contact
+- Technologies : HTML5, CSS3, JavaScript vanilla
+
+STRUCTURE DU PROJET
+-------------------
+
+mandala-2/
+├── accueil.html              # Page d'accueil
+├── a-propos.html          # Page "À propos"
+├── retraites.html         # Page générale des retraites
+├── retraite-inde.html     # Page retraite Inde
+├── retraite-ibiza.html    # Page retraite Ibiza
+├── contact.html           # Page contact
+├── css/
+│   └── style.css         # Styles CSS principaux
+├── js/
+│   └── main.js          # JavaScript principal
+├── images/               # Dossier des images organisées
+│   ├── about/           # Images page "À propos"
+│   ├── cuisine/         # Images cuisine
+│   ├── hero/            # Images arrière-plan
+│   ├── retraites/       # Images retraites
+│   ├── villa/           # Images villa
+│   ├── webp/            # Versions WebP optimisées
+│   ├── README.md        # Documentation images (Markdown)
+│   ├── README.txt       # Documentation images (Texte)
+│   ├── optimize-images.sh # Script d'organisation
+│   └── rename-images.sh  # Script de renommage
+└── download-images.sh    # Script de téléchargement
+
+PAGES PRINCIPALES
+-----------------
+
+1. ACCUEIL.HTML (Accueil)
+   - Hero section avec slider
+   - Présentation des retraites
+   - Navigation vers pages détaillées
+
+2. A-PROPOS.HTML
+   - Informations sur Mandala Project
+   - Photos et descriptions
+   - Responsive design
+
+3. RETRAITES.HTML
+   - Vue d'ensemble des retraites
+   - Liens vers pages spécifiques
+   - Informations générales
+
+4. RETRAITE-INDE.HTML
+   - Retraite au Kerala (Inde)
+   - Dates : 17-27 octobre 2025
+   - Prix : 2800 € par personne
+   - Programme détaillé
+   - Sections "Ce qui est inclus/n'est pas inclus"
+
+5. RETRAITE-IBIZA.HTML
+   - Retraite à Ibiza (Espagne)
+   - Dates : 12-16 mai 2025
+   - Prix : 2800 € par personne
+   - Programme détaillé
+   - Sections "Ce qui est inclus/n'est pas inclus"
+
+6. CONTACT.HTML
+   - Informations de contact
+   - Formulaire de contact
+   - Réseaux sociaux
+
+FONCTIONNALITÉS RESPONSIVE
+--------------------------
+
+DESKTOP :
+- Layout en grille
+- Images côte à côte avec texte
+- Sections "Ce qui est inclus" en format carte
+- Navigation complète
+
+MOBILE :
+- Layout vertical (texte → photo → texte → photo)
+- Sections "Ce qui est inclus" en format texte simple
+- Navigation hamburger
+- Images optimisées pour mobile
+
+ORGANISATION DES IMAGES
+-----------------------
+
+STRUCTURE :
+- Dossiers thématiques (about, cuisine, hero, retraites, villa)
+- Versions WebP optimisées dans webp/
+- Nommage cohérent : [dossier]-[numéro].[extension]
+
+CONVENTIONS :
+- about-1.jpg, about-2.jpg
+- cuisine-1.jpg, cuisine-2.jpg, cuisine-3.jpg
+- hero-1.jpg
+- retraites-1.jpg, retraites-2.jpg, retraites-3.jpg
+- villa-1.jpg, villa-2.jpg, villa-3.jpg, villa-4.jpg
+
+SCRIPTS D'AUTOMATISATION
+------------------------
+
+1. OPTIMIZE-IMAGES.SH
+   - Organise les images dans les bons dossiers
+   - Crée des versions WebP optimisées
+   - Affiche les statistiques
+   - Met à jour les références HTML
+
+2. RENAME-IMAGES.SH
+   - Renomme les images avec numérotation séquentielle
+   - Met automatiquement à jour les références HTML
+   - Crée des rapports de renommage
+   - Affiche les statistiques
+
+UTILISATION DES SCRIPTS
+-----------------------
+
+Organisation des images :
+cd images
+./optimize-images.sh organize
+
+Renommage des images :
+cd images
+./rename-images.sh rename
+
+Voir les statistiques :
+cd images
+./optimize-images.sh stats
+./rename-images.sh stats
+
+Tout faire automatiquement :
+cd images
+./optimize-images.sh all
+./rename-images.sh all
+
+SERVEUR LOCAL
+-------------
+
+Pour tester le site localement :
+python3 -m http.server 8000
+
+Puis ouvrir : http://localhost:8000
+
+FICHIERS IMPORTANTS
+-------------------
+
+CSS PRINCIPAL (css/style.css) :
+- Variables CSS pour couleurs et polices
+- Media queries pour responsive design
+- Styles pour toutes les pages
+- Animations et transitions
+
+JAVASCRIPT (js/main.js) :
+- Navigation mobile
+- Sliders et animations
+- Interactions utilisateur
+
+IMAGES (images/) :
+- Organisation thématique
+- Versions optimisées WebP
+- Scripts d'automatisation
+
+MODIFICATIONS RÉCENTES
+----------------------
+
+1. ORGANISATION DES IMAGES :
+   - Création de dossiers thématiques
+   - Scripts d'automatisation
+   - Documentation complète
+
+2. PAGES RETRAITES :
+   - Structure identique pour Inde et Ibiza
+   - Sections mobile et desktop
+   - Contenu adapté à chaque destination
+
+3. RESPONSIVE DESIGN :
+   - Optimisation mobile
+   - Sections "Ce qui est inclus" masquées sur mobile
+   - Navigation adaptée
+
+NOTES TECHNIQUES
+----------------
+
+- Site statique (pas de backend)
+- Compatible tous navigateurs modernes
+- Images optimisées pour le web
+- Code propre et maintenable
+- Documentation complète
+
+CONTACT ET SUPPORT
+------------------
+
+Pour toute question ou modification :
+- Consulter la documentation dans images/README.txt
+- Utiliser les scripts d'automatisation
+- Tester sur mobile et desktop
+- Vérifier la cohérence des références HTML
+
+DERNIÈRE MISE À JOUR : 22 juillet 2025 
