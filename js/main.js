@@ -204,7 +204,7 @@ function setupLightbox() {
     overlay = document.createElement('div');
     overlay.id = 'lightbox-overlay';
     overlay.style.display = 'none';
-    overlay.innerHTML = '<span id="lightbox-close" style="position:absolute;top:30px;right:40px;font-size:3rem;color:white;cursor:pointer;z-index:10001">&times;</span><img id="lightbox-img" style="max-width:90vw;max-height:90vh;box-shadow:0 0 40px #000;border-radius:10px;z-index:10000">';
+    overlay.innerHTML = '<span id="lightbox-close" style="position:absolute;top:30px;right:40px;font-size:3rem;color:white;cursor:pointer;z-index:10001">&times;</span><img id="lightbox-img" style="max-width:98vw;max-height:98vh;box-shadow:0 0 40px #000;border-radius:10px;z-index:10000;display:block;margin:0 auto;padding:0;background:none;">';
     overlay.style.position = 'fixed';
     overlay.style.top = 0;
     overlay.style.left = 0;
@@ -216,6 +216,8 @@ function setupLightbox() {
     overlay.style.zIndex = 10000;
     overlay.style.flexDirection = 'column';
     overlay.style.textAlign = 'center';
+    overlay.style.padding = '0';
+    overlay.style.margin = '0';
     document.body.appendChild(overlay);
     overlay.addEventListener('click', function(e) {
       if (e.target === overlay || e.target.id === 'lightbox-close') {
@@ -223,7 +225,6 @@ function setupLightbox() {
       }
     });
   } else {
-    // Toujours forcer display:none au chargement
     overlay.style.display = 'none';
   }
   // Ajoute l'événement UNIQUEMENT sur les images enfants d'un carrousel, mais PAS dans un slider principal
