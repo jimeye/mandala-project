@@ -196,7 +196,7 @@ function shuffleCarousels() {
   });
 }
 
-// Lightbox universelle pour toutes les images de carrousel
+// Lightbox universelle pour toutes les images de carrousel, sauf sliders
 function setupLightbox() {
   // Crée l'overlay si pas déjà présent
   if (!document.getElementById('lightbox-overlay')) {
@@ -223,17 +223,21 @@ function setupLightbox() {
       }
     });
   }
-  // Ajoute l'événement UNIQUEMENT sur les images enfants d'un carrousel
+  // Ajoute l'événement UNIQUEMENT sur les images enfants d'un carrousel, mais PAS dans un slider principal
   document.querySelectorAll('[class*="carousel"]').forEach(function(carousel) {
     carousel.querySelectorAll('img').forEach(function(img) {
-      img.style.cursor = 'zoom-in';
-      img.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const overlay = document.getElementById('lightbox-overlay');
-        const lightboxImg = document.getElementById('lightbox-img');
-        lightboxImg.src = img.src;
-        overlay.style.display = 'flex';
-      });
+      // On vérifie que l'image n'est pas dans un slider principal
+      let parent = img.closest('.hero, .hero__slider, .slider, section.hero');
+      if (!parent) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const overlay = document.getElementById('lightbox-overlay');
+          const lightboxImg = document.getElementById('lightbox-img');
+          lightboxImg.src = img.src;
+          overlay.style.display = 'flex';
+        });
+      }
     });
   });
 }
