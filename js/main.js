@@ -40,38 +40,55 @@ document.querySelectorAll('.nav__dropdown').forEach(dropdown => {
     // Gestion du clic pour mobile
     dropdownLink.addEventListener('click', (e) => {
         if (window.innerWidth <= 768) {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
+            // Permettre la navigation vers la page principale
+            // Le sous-menu s'ouvrira au clic sur mobile
+            const dropdownLi = dropdown.closest('li');
+            dropdownLi.classList.toggle('active');
         }
         // Sur desktop, laisser la navigation normale
     });
 });
+
+// Test simple pour vérifier que le JavaScript fonctionne
+console.log('JavaScript chargé !');
 
 // Modification du texte des sliders sur mobile
 function adjustSliderText() {
     const heroSubtitles = document.querySelectorAll('.hero__subtitle');
     const isMobile = window.innerWidth <= 768;
     
+    console.log('adjustSliderText appelé, isMobile:', isMobile, 'heroSubtitles:', heroSubtitles.length);
+    
     heroSubtitles.forEach(subtitle => {
+        console.log('Texte original:', subtitle.innerHTML);
+        
         if (isMobile) {
-            // Sur mobile : ajoute un saut de ligne après "rééquilibrer"
-            subtitle.innerHTML = subtitle.innerHTML.replace(
-                'rééquilibrer corps et esprit',
-                'rééquilibrer<br>corps et esprit'
-            );
+            // Sur mobile : format sur 3 lignes
+            subtitle.innerHTML = 'Une retraite holistique à Ibiza<br>en Inde,<br>une parenthèse précieuse<br>pour rééquilibrer corps et esprit';
         } else {
             // Sur desktop : remet le texte original
-            subtitle.innerHTML = subtitle.innerHTML.replace(
-                'rééquilibrer<br>corps et esprit',
-                'rééquilibrer corps et esprit'
-            );
+            subtitle.innerHTML = 'Une retraite holistique à Ibiza et en Inde, une parenthèse précieuse pour rééquilibrer corps et esprit';
         }
+        
+        console.log('Texte modifié:', subtitle.innerHTML);
     });
 }
 
 // Applique les modifications au chargement et au redimensionnement
 window.addEventListener('load', adjustSliderText);
 window.addEventListener('resize', adjustSliderText);
+
+// Appel immédiat si le DOM est déjà prêt
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', adjustSliderText);
+} else {
+    adjustSliderText();
+}
+
+// Force l'exécution après un délai pour s'assurer que tout est chargé
+setTimeout(adjustSliderText, 100);
+setTimeout(adjustSliderText, 500);
+setTimeout(adjustSliderText, 1000);
 
 // Header qui disparaît au scroll et logo qui disparaît au scroll
 let lastScrollTop = 0;
