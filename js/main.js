@@ -178,3 +178,67 @@ scrollTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 }); 
+
+// Mélange aléatoire des images dans tous les carrousels
+function shuffleCarousels() {
+  document.querySelectorAll('[class*="carousel"]').forEach(function(carousel) {
+    // On cible tous les enfants directs qui sont des lignes ou des conteneurs de photos
+    let lines = Array.from(carousel.children);
+    lines.forEach(function(line) {
+      // On cible les images ou divs photos dans chaque ligne
+      let photos = Array.from(line.children);
+      for (let i = photos.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [photos[i], photos[j]] = [photos[j], photos[i]];
+      }
+      photos.forEach(function(photo) {
+        line.appendChild(photo);
+      });
+    });
+  });
+}
+
+// Lightbox universelle pour toutes les images de carrousel
+function setupLightbox() {
+  // Crée l'overlay si pas déjà présent
+  if (!document.getElementById('lightbox-overlay')) {
+    const overlay = document.createElement('div');
+    overlay.id = 'lightbox-overlay';
+    overlay.style.display = 'none';
+    overlay.innerHTML = '<span id="lightbox-close" style="position:absolute;top:30px;right:40px;font-size:3rem;color:white;cursor:pointer;z-index:10001">&times;</span><img id="lightbox-img" style="max-width:90vw;max-height:90vh;box-shadow:0 0 40px #000;border-radius:10px;z-index:10000">';
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100vw';
+    overlay.style.height = '100vh';
+    overlay.style.background = 'rgba(0,0,0,0.85)';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+    overlay.style.zIndex = 10000;
+    overlay.style.display = 'flex';
+    overlay.style.flexDirection = 'column';
+    overlay.style.textAlign = 'center';
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay || e.target.id === 'lightbox-close') {
+        overlay.style.display = 'none';
+      }
+    });
+  }
+  // Ajoute l'événement sur toutes les images de carrousel
+  document.querySelectorAll('[class*="carousel"] img').forEach(function(img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const overlay = document.getElementById('lightbox-overlay');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      overlay.style.display = 'flex';
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  shuffleCarousels();
+  setupLightbox();
+}); 
