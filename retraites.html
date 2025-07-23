@@ -543,5 +543,22 @@
         }
       });
     </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.retraite-old-carousel').forEach(function(carousel) {
+    var lines = Array.from(carousel.querySelectorAll('> div > div'));
+    lines.forEach(function(line) {
+      var photos = Array.from(line.children);
+      for (let i = photos.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [photos[i], photos[j]] = [photos[j], photos[i]];
+      }
+      photos.forEach(function(photo) {
+        line.appendChild(photo);
+      });
+    });
+  });
+});
+</script>
 </body>
 </html> 
