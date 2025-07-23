@@ -182,10 +182,8 @@ scrollTopBtn.addEventListener('click', () => {
 // Mélange aléatoire des images dans tous les carrousels
 function shuffleCarousels() {
   document.querySelectorAll('[class*="carousel"]').forEach(function(carousel) {
-    // On cible tous les enfants directs qui sont des lignes ou des conteneurs de photos
     let lines = Array.from(carousel.children);
     lines.forEach(function(line) {
-      // On cible les images ou divs photos dans chaque ligne
       let photos = Array.from(line.children);
       for (let i = photos.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -225,15 +223,17 @@ function setupLightbox() {
       }
     });
   }
-  // Ajoute l'événement sur toutes les images de carrousel
-  document.querySelectorAll('[class*="carousel"] img').forEach(function(img) {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', function(e) {
-      e.stopPropagation();
-      const overlay = document.getElementById('lightbox-overlay');
-      const lightboxImg = document.getElementById('lightbox-img');
-      lightboxImg.src = img.src;
-      overlay.style.display = 'flex';
+  // Ajoute l'événement UNIQUEMENT sur les images enfants d'un carrousel
+  document.querySelectorAll('[class*="carousel"]').forEach(function(carousel) {
+    carousel.querySelectorAll('img').forEach(function(img) {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const overlay = document.getElementById('lightbox-overlay');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = img.src;
+        overlay.style.display = 'flex';
+      });
     });
   });
 }
