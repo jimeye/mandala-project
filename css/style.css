@@ -349,6 +349,16 @@ h1, h2, h3, h4, h5, h6 {
     color: #E8B4B8;
 }
 
+/* Forçage du sous-titre du slider sur deux lignes */
+.hero__subtitle {
+  display: block !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+.hero__subtitle span {
+  display: block !important;
+}
+
 .hero__scroll {
     position: absolute;
     bottom: 2rem;
