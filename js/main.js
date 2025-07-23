@@ -199,8 +199,9 @@ function shuffleCarousels() {
 // Lightbox universelle pour toutes les images de carrousel, sauf sliders
 function setupLightbox() {
   // Crée l'overlay si pas déjà présent
-  if (!document.getElementById('lightbox-overlay')) {
-    const overlay = document.createElement('div');
+  let overlay = document.getElementById('lightbox-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
     overlay.id = 'lightbox-overlay';
     overlay.style.display = 'none';
     overlay.innerHTML = '<span id="lightbox-close" style="position:absolute;top:30px;right:40px;font-size:3rem;color:white;cursor:pointer;z-index:10001">&times;</span><img id="lightbox-img" style="max-width:90vw;max-height:90vh;box-shadow:0 0 40px #000;border-radius:10px;z-index:10000">';
@@ -213,7 +214,6 @@ function setupLightbox() {
     overlay.style.justifyContent = 'center';
     overlay.style.alignItems = 'center';
     overlay.style.zIndex = 10000;
-    overlay.style.display = 'flex';
     overlay.style.flexDirection = 'column';
     overlay.style.textAlign = 'center';
     document.body.appendChild(overlay);
@@ -222,11 +222,13 @@ function setupLightbox() {
         overlay.style.display = 'none';
       }
     });
+  } else {
+    // Toujours forcer display:none au chargement
+    overlay.style.display = 'none';
   }
   // Ajoute l'événement UNIQUEMENT sur les images enfants d'un carrousel, mais PAS dans un slider principal
   document.querySelectorAll('[class*="carousel"]').forEach(function(carousel) {
     carousel.querySelectorAll('img').forEach(function(img) {
-      // On vérifie que l'image n'est pas dans un slider principal
       let parent = img.closest('.hero, .hero__slider, .slider, section.hero');
       if (!parent) {
         img.style.cursor = 'zoom-in';
