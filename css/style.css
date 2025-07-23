@@ -1388,7 +1388,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero__subtitle {
         font-size: 18px;
-        text-align: center;
+        text-align: left;
         width: 100%;
         margin: 0 auto;
         display: block;
@@ -1396,7 +1396,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero__subtitle {
         white-space: normal;
-        text-align: center;
+        text-align: left;
         width: 100%;
         margin: 0 auto;
         display: block;
@@ -1408,12 +1408,12 @@ h1, h2, h3, h4, h5, h6 {
         float: none !important;
         margin-left: 0 !important;
         display: block;
-        text-align: center;
+        text-align: left;
         margin-top: 0.5rem;
         width: 100%;
         position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        transform: none;
     }
     
     .nav__logo {
