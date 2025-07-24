@@ -207,10 +207,10 @@ function setupLightbox() {
     
     // Taille différente selon l'appareil
     const isMobile = window.innerWidth <= 768;
-    const containerWidth = isMobile ? '79vw' : '63vw'; // 63 + (63 * 0.26) = 79.38 ≈ 79
-    const containerHeight = isMobile ? '79vh' : '63vh';
+    const containerWidth = isMobile ? '50vw' : '40vw';
+    const containerHeight = isMobile ? '50vh' : '40vh';
     
-    overlay.innerHTML = '<div id="lightbox-container" style="position:relative;width:' + containerWidth + ';height:' + containerHeight + ';display:flex;justify-content:center;align-items:center;"><img id="lightbox-img" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:none;border:8px solid rgba(0,0,0,0.7);background:none;padding:0;margin:0;">';
+    overlay.innerHTML = '<div id="lightbox-container" style="position:relative;width:' + containerWidth + ';height:' + containerHeight + ';display:flex;justify-content:center;align-items:center;"><span style="display:inline-block;position:relative;"><img id="lightbox-img" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:48px;box-shadow:none;border:6px solid rgba(0,0,0,0.7);background:none;padding:0;margin:0;transition:box-shadow 0.3s, border-radius 0.3s, border-color 0.3s;display:block;"><button id="lightbox-close" aria-label="Fermer" style="position:absolute;bottom:16px;right:16px;background:none;border:none;cursor:pointer;padding:0;z-index:2;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="10" x2="26" y2="26" stroke="#E8B4B8" stroke-width="3" stroke-linecap="round"/><line x1="26" y1="10" x2="10" y2="26" stroke="#E8B4B8" stroke-width="3" stroke-linecap="round"/></svg></button></span></div>';
     overlay.style.position = 'fixed';
     overlay.style.top = 0;
     overlay.style.left = 0;
@@ -280,9 +280,46 @@ function setupLightbox() {
       overlay.style.display = 'none';
     });
   }
+  // Ajoute l'événement de fermeture sur la croix
+  const closeBtn = document.getElementById('lightbox-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      overlay.style.display = 'none';
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   shuffleCarousels();
   setupLightbox();
 }); 
+
+// Défilement automatique horizontal infini pour tous les carrousels/sliders horizontaux
+(function() {
+  const carousels = document.querySelectorAll('.retraite-old-carousel, .cuisine-carousel, .carousel, .slider, .about-carousel, .gallery-carousel, .photo-carousel, .villa-carousel, .retreat-carousel, .team-carousel, .hero__slider');
+  carousels.forEach(carousel => {
+    let scrollAmount = 0;
+    let isPaused = false;
+    const speed = 0.4; // pixels par frame (lent)
+    // Dupliquer le contenu pour effet infini
+    const inner = carousel.firstElementChild;
+    if (inner) {
+      const clone = inner.cloneNode(true);
+      carousel.appendChild(clone);
+    }
+    function autoScroll() {
+      if (!isPaused) {
+        scrollAmount += speed;
+        if (scrollAmount >= inner.scrollWidth) {
+          scrollAmount = 0;
+        }
+        carousel.scrollLeft = scrollAmount;
+      }
+      requestAnimationFrame(autoScroll);
+    }
+    carousel.addEventListener('mouseenter', function() { isPaused = true; });
+    carousel.addEventListener('mouseleave', function() { isPaused = false; });
+    autoScroll();
+  });
+})(); 

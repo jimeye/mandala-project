@@ -2714,3 +2714,61 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 4px;
 }
 
+.cuisine-carousel .cuisine-photo img {
+  transition: transform 0.3s, box-shadow 0.3s, border-radius 0.3s, z-index 0.3s, border 0.3s;
+  z-index: 1;
+  position: relative;
+  border-radius: 0 !important;
+  border: none;
+}
+.cuisine-carousel .cuisine-photo img:hover {
+  transform: scale(1.4);
+  box-shadow: 0 0 0 6px rgba(0,0,0,0.7);
+  border-radius: 0 !important;
+  z-index: 10;
+  background: none;
+  border: none;
+  outline: 0;
+}
+.cuisine-carousel .cuisine-photo img:hover::after {
+  content: '';
+  position: absolute;
+  top: -6px; left: -6px; right: -6px; bottom: -6px;
+  border-radius: 48px;
+  border: 6px solid rgba(0,0,0,0.7);
+  z-index: 11;
+  pointer-events: none;
+  transition: border-radius 0.3s, border 0.3s;
+}
+
+.about-page__mobile-text, .about-page__text {
+  text-align: left !important;
+}
+
+.carousel img, .slider img, .about-carousel img, .gallery-carousel img, .photo-carousel img, .villa-carousel img, .retreat-carousel img, .team-carousel img, .hero__slider img {
+  transition: transform 0.3s, box-shadow 0.3s, border-radius 0.3s, z-index 0.3s, border 0.3s;
+  z-index: 1;
+  position: relative;
+  border-radius: 0 !important;
+  border: none;
+}
+.carousel img:hover, .slider img:hover, .about-carousel img:hover, .gallery-carousel img:hover, .photo-carousel img:hover, .villa-carousel img:hover, .retreat-carousel img:hover, .team-carousel img:hover, .hero__slider img:hover {
+  transform: scale(1.4);
+  box-shadow: 0 0 0 6px rgba(0,0,0,0.7);
+  border-radius: 0 !important;
+  z-index: 10;
+  background: none;
+  border: none;
+  outline: 0;
+}
+.carousel img:hover::after, .slider img:hover::after, .about-carousel img:hover::after, .gallery-carousel img:hover::after, .photo-carousel img:hover::after, .villa-carousel img:hover::after, .retreat-carousel img:hover::after, .team-carousel img:hover::after, .hero__slider img:hover::after {
+  content: '';
+  position: absolute;
+  top: -6px; left: -6px; right: -6px; bottom: -6px;
+  border-radius: 48px;
+  border: 6px solid rgba(0,0,0,0.7);
+  z-index: 11;
+  pointer-events: none;
+  transition: border-radius 0.3s, border 0.3s;
+}
+
