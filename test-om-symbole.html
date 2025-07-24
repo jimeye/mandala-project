@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Symbole Om</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #E8B4B8;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        
+        .test-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .test-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .instructions {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #E8B4B8;
+        }
+        
+        .status {
+            text-align: center;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test du Symbole Om</h1>
+        
+        <div class="instructions">
+            <h3>📋 Instructions :</h3>
+            <ol>
+                <li>Survolez une des images ci-dessous</li>
+                <li>Vous devriez voir le symbole Om (ॐ) apparaître au centre de l'écran</li>
+                <li>Le symbole devrait avoir une animation de pulsation</li>
+                <li>Le curseur devrait changer pour une loupe</li>
+            </ol>
+        </div>
+        
+        <div class="status info">
+            🔍 Test en cours... Survolez une image pour voir le symbole Om
+        </div>
+        
+        <div class="test-section">
+            <h2>🖼️ Images de test avec classe carousel</h2>
+            <div class="test-images carousel">
+                <img src="images/villa/villa-1.jpg" alt="Test 1" class="test-image">
+                <img src="images/about/about-1.jpg" alt="Test 2" class="test-image">
+                <img src="images/hero/hero-1.jpg" alt="Test 3" class="test-image">
+                <img src="images/cuisine/cuisine-1.jpg" alt="Test 4" class="test-image">
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>🎯 Ce qui devrait se passer :</h2>
+            <ul>
+                <li>✅ Curseur de loupe au survol</li>
+                <li>✅ Effet de zoom sur les images</li>
+                <li>✅ Symbole Om (ॐ) au centre de l'écran</li>
+                <li>✅ Animation de pulsation</li>
+                <li>✅ Fond blanc avec bordure</li>
+            </ul>
+        </div>
+        
+        <div class="status success">
+            ✅ Si vous voyez le symbole Om au centre de l'écran, le test est réussi !
+        </div>
+    </div>
+</body>
+</html> 

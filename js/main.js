@@ -204,13 +204,19 @@ function setupLightbox() {
     overlay = document.createElement('div');
     overlay.id = 'lightbox-overlay';
     overlay.style.display = 'none';
-    overlay.innerHTML = '<span id="lightbox-close" style="position:absolute;top:30px;right:40px;font-size:3rem;color:white;cursor:pointer;z-index:10001">&times;</span><img id="lightbox-img" style="max-width:98vw;max-height:98vh;box-shadow:0 0 40px #000;border-radius:10px;z-index:10000;display:block;margin:0 auto;padding:0;background:none;">';
+    
+    // Taille différente selon l'appareil
+    const isMobile = window.innerWidth <= 768;
+    const containerWidth = isMobile ? '79vw' : '63vw'; // 63 + (63 * 0.26) = 79.38 ≈ 79
+    const containerHeight = isMobile ? '79vh' : '63vh';
+    
+    overlay.innerHTML = '<div id="lightbox-container" style="position:relative;width:' + containerWidth + ';height:' + containerHeight + ';display:flex;justify-content:center;align-items:center;"><img id="lightbox-img" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:none;border:8px solid rgba(0,0,0,0.7);background:none;padding:0;margin:0;">';
     overlay.style.position = 'fixed';
     overlay.style.top = 0;
     overlay.style.left = 0;
     overlay.style.width = '100vw';
     overlay.style.height = '100vh';
-    overlay.style.background = 'rgba(0,0,0,0.85)';
+    overlay.style.background = 'transparent';
     overlay.style.justifyContent = 'center';
     overlay.style.alignItems = 'center';
     overlay.style.zIndex = 10000;
@@ -220,29 +226,60 @@ function setupLightbox() {
     overlay.style.margin = '0';
     document.body.appendChild(overlay);
     overlay.addEventListener('click', function(e) {
-      if (e.target === overlay || e.target.id === 'lightbox-close') {
+      if (e.target === overlay) {
         overlay.style.display = 'none';
       }
     });
   } else {
     overlay.style.display = 'none';
   }
+  
   // Ajoute l'événement UNIQUEMENT sur les images enfants d'un carrousel, mais PAS dans un slider principal
   document.querySelectorAll('[class*="carousel"]').forEach(function(carousel) {
     carousel.querySelectorAll('img').forEach(function(img) {
       let parent = img.closest('.hero, .hero__slider, .slider, section.hero');
       if (!parent) {
-        img.style.cursor = 'zoom-in';
         img.addEventListener('click', function(e) {
           e.stopPropagation();
           const overlay = document.getElementById('lightbox-overlay');
           const lightboxImg = document.getElementById('lightbox-img');
           lightboxImg.src = img.src;
+          
+          // Détermine le curseur selon le type de carrousel
+          let cursorUrl = '';
+          if (img.style.cursor && img.style.cursor.includes('url')) {
+            // Si l'image a déjà un curseur défini, on le copie
+            cursorUrl = img.style.cursor;
+          } else {
+            // Sinon on détermine le curseur selon le type de carrousel
+            if (carousel.classList.contains('retraite-old-carousel')) {
+              if (img.src.includes('retraites-inde')) {
+                cursorUrl = 'url(../images/icons/om-cursor-rose.png), pointer';
+              } else if (img.src.includes('retraites-ibiza')) {
+                cursorUrl = 'url(../images/icons/ibiza-cursor-rose.png), pointer';
+              }
+            } else if (carousel.classList.contains('cuisine-carousel')) {
+              cursorUrl = 'url(../images/icons/cuisine-cursor-rose.png), pointer';
+            }
+          }
+          
+          if (cursorUrl) {
+            lightboxImg.style.cursor = cursorUrl;
+          }
+          
           overlay.style.display = 'flex';
         });
       }
     });
   });
+  
+  // Ajoute l'événement de fermeture sur l'image du lightbox
+  const lightboxImg = document.getElementById('lightbox-img');
+  if (lightboxImg) {
+    lightboxImg.addEventListener('click', function() {
+      overlay.style.display = 'none';
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {

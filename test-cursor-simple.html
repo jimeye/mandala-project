@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Curseur Om Simple</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #E8B4B8;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        
+        .test-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .test-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .instructions {
+            background: #E8B4B8;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .status {
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .warning {
+            background: #FF9800;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Curseur Om - Version Simple</h1>
+        
+        <div class="instructions">
+            <h2>📋 Instructions :</h2>
+            <p><strong>1.</strong> Survolez les images ci-dessous avec votre souris</p>
+            <p><strong>2.</strong> Vous devriez voir un curseur de loupe (zoom-in)</p>
+            <p><strong>3.</strong> Le symbole Om (ॐ) devrait apparaître au centre de l'écran</p>
+            <p><strong>4.</strong> Les images devraient s'agrandir légèrement</p>
+        </div>
+        
+        <div class="test-section">
+            <h3>🖼️ Images de test :</h3>
+            <div class="test-images">
+                <img src="images/hero/hero-1.jpg" alt="Test 1" class="test-image">
+                <img src="images/about/about-1.jpg" alt="Test 2" class="test-image">
+                <img src="images/villa/villa-1.jpg" alt="Test 3" class="test-image">
+                <img src="images/cuisine/cuisine-1.jpg" alt="Test 4" class="test-image">
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>✅ Ce qui devrait fonctionner :</h3>
+            <div class="status">
+                <p>✅ Curseur de loupe (zoom-in) sur les images</p>
+            </div>
+            <div class="status">
+                <p>✅ Effet de zoom au survol des images</p>
+            </div>
+            <div class="status">
+                <p>✅ Symbole Om flottant au centre de l'écran</p>
+            </div>
+            <div class="status">
+                <p>✅ Animation du symbole Om</p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🔧 Si ça ne fonctionne pas :</h3>
+            <div class="warning">
+                <p>⚠️ Essayez de rafraîchir la page (Ctrl+F5 ou Cmd+Shift+R)</p>
+            </div>
+            <div class="warning">
+                <p>⚠️ Testez sur un autre navigateur (Chrome, Safari, Firefox)</p>
+            </div>
+            <div class="warning">
+                <p>⚠️ Vérifiez que JavaScript est activé</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" style="display: inline-block; padding: 12px 25px; background: #E8B4B8; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">← Retour au site</a>
+        </div>
+    </div>
+</body>
+</html> 

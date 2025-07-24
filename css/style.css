@@ -2661,3 +2661,42 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Curseur personnalisé pour les images des carrousels - Curseur Om Rose pour Inde */
+.retraite-old-carousel img[src*="retraites-inde"] {
+    cursor: url('../images/icons/om-cursor-rose.png'), pointer !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.retraite-old-carousel img[src*="retraites-inde"]:hover {
+    cursor: url('../images/icons/om-cursor-rose.png'), pointer !important;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Curseur personnalisé pour les images des carrousels - Curseur Ibiza Rose */
+.retraite-old-carousel img[src*="retraites-ibiza"] {
+    cursor: url('../images/icons/ibiza-cursor-rose.png'), pointer !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.retraite-old-carousel img[src*="retraites-ibiza"]:hover {
+    cursor: url('../images/icons/ibiza-cursor-rose.png'), pointer !important;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Curseur personnalisé pour les images des carrousels - Curseur Cuisine Rose */
+.cuisine-carousel img {
+    cursor: url('../images/icons/cuisine-cursor-rose.png'), pointer !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cuisine-carousel img:hover {
+    cursor: url('../images/icons/cuisine-cursor-rose.png'), pointer !important;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Final Curseur Om</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .test-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .test-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .test-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .test-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .test-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .test-info {
+            background: linear-gradient(135deg, #E8B4B8, #f5f1f1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            color: #333;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .status-ok {
+            background: #4CAF50;
+        }
+        
+        .status-warning {
+            background: #FF9800;
+        }
+        
+        .status-error {
+            background: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Test Final du Curseur Om</h1>
+        
+        <div class="test-section">
+            <h2>📋 Instructions de test :</h2>
+            <div class="test-info">
+                <p><strong>1.</strong> Survolez les images ci-dessous avec votre souris</p>
+                <p><strong>2.</strong> Vous devriez voir un curseur de loupe (zoom-in)</p>
+                <p><strong>3.</strong> Le symbole Om (ॐ) devrait apparaître au centre de l'écran</p>
+                <p><strong>4.</strong> Les images devraient légèrement s'agrandir au survol</p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>🖼️ Images de test :</h2>
+            <div class="test-images">
+                <img src="images/hero/hero-1.jpg" alt="Test 1" class="test-image">
+                <img src="images/about/about-1.jpg" alt="Test 2" class="test-image">
+                <img src="images/villa/villa-1.jpg" alt="Test 3" class="test-image">
+                <img src="images/cuisine/cuisine-1.jpg" alt="Test 4" class="test-image">
+                <img src="images/retraites/retraites-1.jpg" alt="Test 5" class="test-image">
+                <img src="images/retraites/retraites-2.jpg" alt="Test 6" class="test-image">
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>✅ Résultats attendus :</h2>
+            <div class="test-info">
+                <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <li><span class="status-indicator status-ok"></span>Curseur de loupe visible sur les images</li>
+                    <li><span class="status-indicator status-ok"></span>Effet de zoom au survol des images</li>
+                    <li><span class="status-indicator status-ok"></span>Symbole Om flottant au centre de l'écran</li>
+                    <li><span class="status-indicator status-ok"></span>Animation du symbole Om</li>
+                    <li><span class="status-indicator status-ok"></span>Ombre portée sur les images au survol</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>🔧 Dépannage :</h2>
+            <div class="test-info">
+                <p><strong>Si le symbole Om n'apparaît pas :</strong></p>
+                <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <li>Vérifiez que votre navigateur supporte les emojis Unicode</li>
+                    <li>Essayez de rafraîchir la page (Ctrl+F5)</li>
+                    <li>Testez sur un autre navigateur (Chrome, Safari, Firefox)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="display: inline-block; padding: 15px 30px; background: var(--color-primary); color: white; text-decoration: none; border-radius: 10px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">← Retour au site principal</a>
+        </div>
+    </div>
+</body>
+</html> 
