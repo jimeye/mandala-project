@@ -52,7 +52,8 @@ document.querySelectorAll('.nav__dropdown').forEach(dropdown => {
 // Test simple pour vérifier que le JavaScript fonctionne
 console.log('JavaScript chargé !');
 
-// Modification du texte des sliders sur mobile
+// Modification du texte des sliders sur mobile - DÉSACTIVÉ pour permettre la personnalisation
+/*
 function adjustSliderText() {
     const heroSubtitles = document.querySelectorAll('.hero__subtitle');
     const isMobile = window.innerWidth <= 768;
@@ -89,6 +90,7 @@ if (document.readyState === 'loading') {
 setTimeout(adjustSliderText, 100);
 setTimeout(adjustSliderText, 500);
 setTimeout(adjustSliderText, 1000);
+*/
 
 // Header qui disparaît au scroll et logo qui disparaît au scroll
 let lastScrollTop = 0;
