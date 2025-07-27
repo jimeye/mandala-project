@@ -2266,6 +2266,11 @@ h1, h2, h3, h4, h5, h6 {
     .about-page__content {
         display: none;
     }
+
+    .about-page__content ul,
+    .about-page__content li {
+        display: block !important;
+    }
     
     .about-page {
         margin-bottom: 0 !important;
