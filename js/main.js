@@ -92,7 +92,7 @@ setTimeout(adjustSliderText, 500);
 setTimeout(adjustSliderText, 1000);
 */
 
-// Header qui disparaît au scroll et logo qui disparaît au scroll
+// Header qui disparaît au scroll et ne réapparaît pas
 let lastScrollTop = 0;
 const header = document.querySelector('.header');
 const navLogo = document.querySelector('.nav__logo');
@@ -110,8 +110,8 @@ window.addEventListener('scroll', () => {
     if (scrollTop > lastScrollTop && scrollTop > 100) {
         // Scroll vers le bas - cacher le header
         header.style.transform = 'translateY(-100%)';
-    } else {
-        // Scroll vers le haut - montrer le header
+    } else if (scrollTop === 0) {
+        // Retour en haut de page - réapparaître le header
         header.style.transform = 'translateY(0)';
     }
     
