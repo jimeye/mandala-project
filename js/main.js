@@ -198,6 +198,11 @@ function shuffleCarousels() {
   });
 }
 
+// Variables globales pour la navigation lightbox
+let currentCarousel = null;
+let currentImageIndex = 0;
+let currentImages = [];
+
 // Lightbox universelle pour toutes les images de carrousel, sauf sliders
 function setupLightbox() {
   // Crée l'overlay si pas déjà présent
@@ -212,7 +217,7 @@ function setupLightbox() {
     const containerWidth = isMobile ? '50vw' : '40vw';
     const containerHeight = isMobile ? '50vh' : '40vh';
     
-    overlay.innerHTML = '<div id="lightbox-container" style="position:relative;width:' + containerWidth + ';height:' + containerHeight + ';display:flex;justify-content:center;align-items:center;"><span style="display:inline-block;position:relative;"><img id="lightbox-img" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:48px;box-shadow:none;border:6px solid rgba(0,0,0,0.7);background:none;padding:0;margin:0;transition:box-shadow 0.3s, border-radius 0.3s, border-color 0.3s;display:block;"><button id="lightbox-close" aria-label="Fermer" style="position:absolute;bottom:16px;right:16px;background:none;border:none;cursor:pointer;padding:0;z-index:2;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="10" x2="26" y2="26" stroke="#E8B4B8" stroke-width="3" stroke-linecap="round"/><line x1="26" y1="10" x2="10" y2="26" stroke="#E8B4B8" stroke-width="3" stroke-linecap="round"/></svg></button></span></div>';
+    overlay.innerHTML = '<div id="lightbox-container" style="position:relative;width:' + containerWidth + ';height:' + containerHeight + ';display:flex;justify-content:center;align-items:center;"><button id="lightbox-prev" aria-label="Précédent" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;padding:0;z-index:2;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 10L12 18L20 26" stroke="#E8B4B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span style="display:inline-block;position:relative;"><img id="lightbox-img" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:0;box-shadow:none;border:6px solid rgba(255,255,255,0.7);background:none;padding:0;margin:0;transition:box-shadow 0.3s, border-radius 0.3s, border-color 0.3s;display:block;"><button id="lightbox-close" aria-label="Fermer" style="position:absolute;bottom:16px;right:16px;background:none;border:none;cursor:pointer;padding:0;z-index:2;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="10" x2="26" y2="26" stroke="#E8B4B8" stroke-width="3" stroke-linecap="round"/><line x1="26" y1="10" x2="10" y2="26" stroke="#E8B4B8" stroke-width="3" stroke-linecap="round"/></svg></button></span><button id="lightbox-next" aria-label="Suivant" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;padding:0;z-index:2;"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 10L24 18L16 26" stroke="#E8B4B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>';
     overlay.style.position = 'fixed';
     overlay.style.top = 0;
     overlay.style.left = 0;
@@ -245,6 +250,12 @@ function setupLightbox() {
           e.stopPropagation();
           const overlay = document.getElementById('lightbox-overlay');
           const lightboxImg = document.getElementById('lightbox-img');
+          
+          // Stocker les informations de navigation
+          currentCarousel = carousel;
+          currentImages = Array.from(carousel.querySelectorAll('img'));
+          currentImageIndex = currentImages.indexOf(img);
+          
           lightboxImg.src = img.src;
           
           // Détermine le curseur selon le type de carrousel
@@ -275,6 +286,29 @@ function setupLightbox() {
     });
   });
   
+  // Fonctions de navigation
+  function showImage(index) {
+    if (currentImages.length > 0) {
+      currentImageIndex = index;
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = currentImages[currentImageIndex].src;
+    }
+  }
+  
+  function nextImage() {
+    if (currentImages.length > 0) {
+      const nextIndex = (currentImageIndex + 1) % currentImages.length;
+      showImage(nextIndex);
+    }
+  }
+  
+  function prevImage() {
+    if (currentImages.length > 0) {
+      const prevIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+      showImage(prevIndex);
+    }
+  }
+  
   // Ajoute l'événement de fermeture sur l'image du lightbox
   const lightboxImg = document.getElementById('lightbox-img');
   if (lightboxImg) {
@@ -282,6 +316,7 @@ function setupLightbox() {
       overlay.style.display = 'none';
     });
   }
+  
   // Ajoute l'événement de fermeture sur la croix
   const closeBtn = document.getElementById('lightbox-close');
   if (closeBtn) {
@@ -290,6 +325,36 @@ function setupLightbox() {
       overlay.style.display = 'none';
     });
   }
+  
+  // Ajoute les événements de navigation sur les flèches
+  const prevBtn = document.getElementById('lightbox-prev');
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      prevImage();
+    });
+  }
+  
+  const nextBtn = document.getElementById('lightbox-next');
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      nextImage();
+    });
+  }
+  
+  // Navigation au clavier
+  document.addEventListener('keydown', function(e) {
+    if (overlay.style.display === 'flex') {
+      if (e.key === 'ArrowLeft') {
+        prevImage();
+      } else if (e.key === 'ArrowRight') {
+        nextImage();
+      } else if (e.key === 'Escape') {
+        overlay.style.display = 'none';
+      }
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() {

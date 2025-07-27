@@ -43,19 +43,19 @@
 }
 
 .retraite-old-carousel > div {
-    gap: 4px !important;
+    gap: 3px !important;
 }
 
 .cuisine-carousel > div {
-    gap: 4px !important;
+    gap: 3px !important;
 }
 
 .retraite-old-carousel > div > div {
-    gap: 4px !important;
+    gap: 3px !important;
 }
 
 .cuisine-carousel > div > div {
-    gap: 4px !important;
+    gap: 3px !important;
 }
 
 /* Styles pour les images dans les carrousels */
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     width: 100vw;
-    background: rgba(245, 241, 241, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: none;
     z-index: 1000;
     transition: transform 0.3s ease;
@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px 16px;
     max-width: 1200px;
     margin: 0 auto;
     background: none;
@@ -189,8 +189,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__logo {
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1.4rem;
-    color: var(--color-background);
+    font-size: 1.848rem;
+    color: #E8B4B8;
     text-decoration: none;
     text-align: left;
     background: none;
@@ -217,9 +217,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav__link {
-    color: var(--color-background);
+    color: #E8B4B8;
     text-decoration: none;
     font-weight: 400;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
     background: none;
     letter-spacing: 0.015em;
@@ -227,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav__link:hover {
-    color: #E8B4B8;
+    color: var(--color-background);
 }
 
 /* Sous-menus */
@@ -261,11 +262,11 @@ h1, h2, h3, h4, h5, h6 {
 .nav__submenu-link {
     display: block;
     padding: 0;
-    color: var(--color-background);
+    color: #E8B4B8;
     text-decoration: none;
     font-weight: 400;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1.08rem;
     background: none;
     list-style: none;
     letter-spacing: 0.008em;
@@ -278,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__submenu-link:hover {
     background: none;
-    color: #E8B4B8;
+    color: var(--color-background);
     padding-left: 0;
 }
 
@@ -1322,7 +1323,7 @@ h1, h2, h3, h4, h5, h6 {
     .nav__submenu-link {
         padding: 0;
         font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.8);
+        color: #E8B4B8;
         font-weight: 400;
         text-transform: none;
         letter-spacing: normal;
@@ -1330,13 +1331,13 @@ h1, h2, h3, h4, h5, h6 {
     
     .nav__submenu-link:hover {
         background: none;
-        color: var(--color-primary);
+        color: var(--color-background);
         padding-left: 1rem;
         transition: all 0.3s ease;
     }
 
     .nav__link {
-        color: rgba(255, 255, 255, 0.8);
+        color: #E8B4B8;
         font-size: 1rem;
         padding: 0;
         font-weight: 400;
@@ -1361,7 +1362,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 25px;
     height: 2px;
-    background-color: var(--color-background);
+    background-color: #E8B4B8;
     margin: 5px 0;
     transition: all 0.3s ease;
 }
@@ -1404,7 +1405,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .nav__logo {
         margin: 0.5rem 0;
-        font-size: 1.2rem;
+        font-size: 1.32rem;
         letter-spacing: 0.12em;
         line-height: 1.1;
     }
@@ -2572,8 +2573,8 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   border-radius: 50%;
   box-shadow: none;
-  width: 40px;
-  height: 40px;
+  width: 53px;
+  height: 53px;
   cursor: pointer;
   transition: transform 0.2s;
   outline: none;
@@ -2591,14 +2592,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
   #scrollTopBtn {
-    width: 32px;
-    height: 32px;
+    width: 42px;
+    height: 42px;
     bottom: 20px;
     right: 12px;
   }
   #scrollTopBtn svg {
-    width: 16px;
-    height: 16px;
+    width: 21px;
+    height: 21px;
   }
 }
 
@@ -2656,8 +2657,7 @@ h1, h2, h3, h4, h5, h6 {
 .retraite-old-carousel img[src*="retraites-inde"]:hover {
     cursor: url('../images/icons/om-cursor-rose.png'), pointer !important;
     transform: scale(1.26);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border: 4px solid rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(255, 255, 255, 0.85);
     border-radius: 4px;
 }
 
@@ -2671,8 +2671,7 @@ h1, h2, h3, h4, h5, h6 {
 .retraite-old-carousel img[src*="retraites-ibiza"]:hover {
     cursor: url('../images/icons/ibiza-cursor-rose.png'), pointer !important;
     transform: scale(1.26);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border: 4px solid rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(255, 255, 255, 0.85);
     border-radius: 4px;
 }
 
@@ -2686,8 +2685,7 @@ h1, h2, h3, h4, h5, h6 {
 .cuisine-carousel img:hover {
     cursor: url('../images/icons/cuisine-cursor-rose.png'), pointer !important;
     transform: scale(1.26);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    border: 4px solid rgba(0, 0, 0, 0.7);
+    border: 3px solid rgba(255, 255, 255, 0.85);
     border-radius: 4px;
 }
 
@@ -2700,7 +2698,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .cuisine-carousel .cuisine-photo img:hover {
   transform: scale(1.4);
-  box-shadow: 0 0 0 6px rgba(0,0,0,0.7);
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.7);
   border-radius: 0 !important;
   z-index: 10;
   background: none;
@@ -2712,7 +2710,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: -6px; left: -6px; right: -6px; bottom: -6px;
   border-radius: 48px;
-  border: 6px solid rgba(0,0,0,0.7);
+  border: 6px solid rgba(255,255,255,0.7);
   z-index: 11;
   pointer-events: none;
   transition: border-radius 0.3s, border 0.3s;
@@ -2731,7 +2729,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .carousel img:hover, .slider img:hover, .about-carousel img:hover, .gallery-carousel img:hover, .photo-carousel img:hover, .villa-carousel img:hover, .retreat-carousel img:hover, .team-carousel img:hover, .hero__slider img:hover {
   transform: scale(1.4);
-  box-shadow: 0 0 0 6px rgba(0,0,0,0.7);
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.7);
   border-radius: 0 !important;
   z-index: 10;
   background: none;
@@ -2743,7 +2741,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: -6px; left: -6px; right: -6px; bottom: -6px;
   border-radius: 48px;
-  border: 6px solid rgba(0,0,0,0.7);
+  border: 6px solid rgba(255,255,255,0.7);
   z-index: 11;
   pointer-events: none;
   transition: border-radius 0.3s, border 0.3s;
