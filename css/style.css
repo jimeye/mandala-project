@@ -2865,18 +2865,18 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 32px;
   right: 24px;
   z-index: 9999;
-  background: none;
+  background: rgba(255, 255, 255, 0.5);
   border: none;
-  border-radius: 50%;
-  box-shadow: none;
-  width: 53px;
-  height: 53px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 42px;
+  height: 42px;
   cursor: pointer;
   transition: transform 0.2s;
   outline: none;
 }
 #scrollTopBtn:hover, #scrollTopBtn:focus {
-  background: none;
+  background: rgba(255, 255, 255, 0.7);
   transform: scale(1.1);
 }
 #scrollTopBtn svg {
@@ -2888,8 +2888,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
   #scrollTopBtn {
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
     bottom: 20px;
     right: 12px;
   }
@@ -2902,44 +2902,50 @@ h1, h2, h3, h4, h5, h6 {
 /* Module de musique */
 #musicPlayer {
   position: fixed;
-  bottom: 32px;
+  bottom: 10px;
   left: 24px;
   z-index: 9998;
   display: block !important;
 }
 #musicToggle {
-  background: none;
+  background: rgba(255, 255, 255, 0.5);
   border: none;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
-#musicToggle:hover {
+
+
+
+
+#musicToggle:hover, #musicToggle:focus {
+  background: rgba(255, 255, 255, 0.7);
   transform: scale(1.1);
 }
 #musicToggle svg {
-  width: 24px;
-  height: 24px;
+  display: block;
+  margin: auto;
 }
 #musicToggle svg path {
-  fill: #E8B4B8;
+  stroke: #E8B4B8;
 }
 @media (max-width: 768px) {
-  #musicPlayer {
+  #musicToggle {
+    width: 34px;
+    height: 34px;
     bottom: 20px;
     left: 12px;
   }
-  #musicToggle {
-    width: 32px;
-    height: 32px;
-  }
   #musicToggle svg {
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
   }
 }
 
