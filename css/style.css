@@ -1940,6 +1940,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
     line-height: 1.6;
     font-weight: 300;
+    text-align: justify;
 }
 
 .about-page__image {
@@ -3011,7 +3012,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: border-radius 0.3s, border 0.3s;
 }
 
-.about-page__mobile-text, .about-page__text {
+.about-page__mobile-text {
   text-align: left !important;
 }
 
