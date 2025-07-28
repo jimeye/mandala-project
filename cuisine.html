@@ -65,7 +65,7 @@
     }
     </script>
 </head>
-<body>
+<body class="cuisine-page">
     <!-- Flèche flottante pour remonter en haut de la page -->
     <button id="scrollTopBtn" aria-label="Remonter en haut">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,17 +100,24 @@
 
     <main>
         <section class="hero" style="background-image: url('images/webp/retraites-inde/retraite-inde-melanie-elbaz-sunset-ibiza-inde-retraite-yoga-holistique-mandala-project-India-11.webp')">
+            <p class="hero__subtitle" style="white-space:nowrap; overflow:auto;">Une alimentation consciente et régénérante au cœur de nos retraites.</p>
             <div class="hero__content">
-                <p class="hero__subtitle" style="white-space:nowrap; overflow:auto;">Une alimentation consciente et régénérante au cœur de nos retraites.</p>
             </div>
-            <div class="slider-mobile-text">
-                Une alimentation consciente et régénérante<br>au cœur de nos retraites.
-            </div>
+            <!-- Texte spécifique pour mobile en haut à gauche -->
+                                <div class="cuisine-mobile-text" style="position: absolute; top: 80px; left: 20px; z-index: 10; color: white; font-size: 16px; font-family: 'Inter', sans-serif; display: none;">
+                        Une alimentation consciente et régénérante au cœur de nos retraites.
+                    </div>
         </section>
 
         <section class="about-page">
             <div class="container">
                 <!-- Grille de photos style capture -->
+                
+                <!-- Titre déplacé entre section et carrousel -->
+                <div style="text-align: center; max-width: 1200px; margin: 10px auto 0px auto; padding: 0 0px;" class="titre-voyage-inde">
+                    <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-text); font-family: 'Inter', sans-serif;">La Cuisine des Retraites</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-text); font-family: 'Inter', sans-serif;" class="cuisine-sous-titre">Une alimentation consciente et régénérante<br>au cœur de nos retraites.</p>
+                </div>
                 
                 <!-- Carrousel horizontal avec photos qui prennent les deux lignes -->
                 <div class="cuisine-carousel" style="overflow-x: auto; white-space: nowrap; margin: 0;">
@@ -140,23 +147,18 @@
                 </div>
                 
                 <!-- Bloc texte centré -->
-                <div style="text-align: left; max-width: 1200px; margin: 40px auto; padding: 0 20px; font-family: 'Inter', sans-serif;">
-                    <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif;">La Cuisine des Retraites</h2>
+                <div style="text-align: center; max-width: 1200px; margin: 40px auto; padding: 0 20px; font-family: 'Inter', sans-serif;">
                     
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif;">
-                        Une alimentation consciente et régénérante au cœur de nos retraites.
-                    </p>
-                    
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; text-align: center;">
                         Nous croyons que l'alimentation est un pilier fondamental de la transformation personnelle. Chaque repas est préparé avec intention, en utilisant des ingrédients frais, locaux et de saison.
                     </p>
                     
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; text-align: center;">
                         Notre cuisine végétarienne est conçue pour nourrir le corps et l'esprit, en harmonie avec les pratiques de yoga et de méditation.
                     </p>
                     
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif;">Notre approche culinaire :</h3>
-                    <ul style="text-align: left; max-width: 600px; margin: 0 auto 2rem auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
+
+                    <ul style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Ingrédients frais et locaux de saison</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Cuisine végétarienne équilibrée et nutritive</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Préparation consciente avec des intentions positives</li>
@@ -165,8 +167,8 @@
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Moment de partage et de connexion autour de la table</li>
                     </ul>
                     
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif;">Ce que vous découvrirez :</h3>
-                    <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif; text-align: center;">Ce que vous découvrirez :</h3>
+                    <ul style="text-align: center; max-width: 600px; margin: 0 auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">L'art de manger en pleine conscience</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Les bienfaits d'une alimentation sattvique</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Des recettes simples à reproduire chez vous</li>

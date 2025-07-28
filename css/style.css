@@ -21,7 +21,8 @@
 
 /* Styles spécifiques pour les carrousels avec marges forcées */
 .retraite-old-carousel {
-    margin: 4px 0 0 0 !important;
+    margin: 0px 0 0 0 !important;
+    padding: 0 !important;
     /* Masquer les barres de défilement tout en gardant la fonctionnalité */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -362,6 +363,300 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto !important;
     line-height: 1.4 !important;
   }
+  
+  /* Spécifique pour la page cuisine - texte en haut à gauche sur mobile uniquement */
+  .cuisine-page .hero .hero__subtitle {
+    text-align: left !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 20px !important;
+    margin: 80px 0 0 20px !important;
+    max-width: none !important;
+    z-index: 10 !important;
+  }
+}
+
+/* Desktop - remettre le texte centré pour la page cuisine */
+@media (min-width: 769px) {
+  .cuisine-page .hero .hero__subtitle {
+    position: static !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 95vw !important;
+  }
+  
+  .cuisine-mobile-text {
+    display: none !important;
+  }
+}
+
+/* Desktop - remettre le texte centré pour la page index */
+@media (min-width: 769px) {
+  .index-page .hero .hero__subtitle {
+    position: static !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 95vw !important;
+  }
+  
+  .index-mobile-text {
+    display: none !important;
+  }
+}
+
+/* Desktop - remettre le texte centré pour la page retraite-inde */
+@media (min-width: 769px) {
+  .retraite-inde-page .hero .hero__subtitle {
+    position: static !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 95vw !important;
+  }
+  
+  .retraite-inde-mobile-text {
+    display: none !important;
+  }
+}
+
+/* Desktop - remettre le texte centré pour la page retraites */
+@media (min-width: 769px) {
+  .retraites-page .hero .hero__subtitle {
+    position: static !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 95vw !important;
+  }
+  
+  .retraites-mobile-text {
+    display: none !important;
+  }
+}
+
+/* Desktop - remettre le texte centré pour la page retraite-ibiza */
+@media (min-width: 769px) {
+  .retraite-ibiza-page .hero .hero__subtitle {
+    position: static !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 95vw !important;
+  }
+  
+  .retraite-ibiza-mobile-text {
+    display: none !important;
+  }
+}
+
+/* Desktop - remettre le texte centré pour la page a-propos */
+@media (min-width: 769px) {
+  .a-propos-page .hero .hero__subtitle {
+    position: static !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 95vw !important;
+  }
+  
+  .a-propos-mobile-text {
+    display: none !important;
+  }
+}
+
+/* Desktop - remettre le texte centré pour la page contact */
+@media (min-width: 769px) {
+  .contact-page .hero .hero__subtitle {
+    position: static !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 95vw !important;
+  }
+  
+  .contact-mobile-text {
+    display: none !important;
+  }
+}
+
+/* Mobile - afficher le texte en haut à gauche */
+@media (max-width: 768px) {
+  .cuisine-mobile-text {
+    display: block !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.015em !important;
+    text-rendering: optimizeLegibility !important;
+    color: var(--color-background) !important;
+    transition: color 0.3s ease !important;
+    max-width: 250px !important;
+    white-space: pre-line !important;
+  }
+  
+  .cuisine-mobile-text:hover {
+    color: #E8B4B8 !important;
+  }
+  
+  .cuisine-page .hero .hero__subtitle {
+    display: none !important; /* Cache le texte original sur mobile */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+  
+  .index-mobile-text {
+    display: block !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.015em !important;
+    text-rendering: optimizeLegibility !important;
+    color: var(--color-background) !important;
+    transition: color 0.3s ease !important;
+    max-width: 250px !important;
+    white-space: pre-line !important;
+  }
+  
+  .index-mobile-text:hover {
+    color: #E8B4B8 !important;
+  }
+  
+  .index-page .hero .hero__subtitle {
+    display: none !important; /* Cache le texte original sur mobile */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+  
+  .retraite-inde-mobile-text {
+    display: block !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.015em !important;
+    text-rendering: optimizeLegibility !important;
+    color: var(--color-background) !important;
+    transition: color 0.3s ease !important;
+    max-width: 250px !important;
+    white-space: pre-line !important;
+  }
+  
+  .retraite-inde-mobile-text:hover {
+    color: #E8B4B8 !important;
+  }
+  
+  .retraite-inde-page .hero .hero__subtitle {
+    display: none !important; /* Cache le texte original sur mobile */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+  
+  .retraites-mobile-text {
+    display: block !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.015em !important;
+    text-rendering: optimizeLegibility !important;
+    color: var(--color-background) !important;
+    transition: color 0.3s ease !important;
+    max-width: 250px !important;
+    white-space: pre-line !important;
+  }
+  
+  .retraites-mobile-text:hover {
+    color: #E8B4B8 !important;
+  }
+  
+  .retraites-page .hero .hero__subtitle {
+    display: none !important; /* Cache le texte original sur mobile */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+  
+  .retraite-ibiza-mobile-text {
+    display: block !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.015em !important;
+    text-rendering: optimizeLegibility !important;
+    color: var(--color-background) !important;
+    transition: color 0.3s ease !important;
+    max-width: 250px !important;
+    white-space: pre-line !important;
+  }
+  
+  .retraite-ibiza-mobile-text:hover {
+    color: #E8B4B8 !important;
+  }
+  
+  .retraite-ibiza-page .hero .hero__subtitle {
+    display: none !important; /* Cache le texte original sur mobile */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+  
+  .a-propos-mobile-text {
+    display: block !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.015em !important;
+    text-rendering: optimizeLegibility !important;
+    color: var(--color-background) !important;
+    transition: color 0.3s ease !important;
+    max-width: 250px !important;
+    white-space: pre-line !important;
+  }
+  
+  .a-propos-mobile-text:hover {
+    color: #E8B4B8 !important;
+  }
+  
+  .a-propos-page .hero .hero__subtitle {
+    display: none !important; /* Cache le texte original sur mobile */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+  
+  .contact-mobile-text {
+    display: block !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.015em !important;
+    text-rendering: optimizeLegibility !important;
+    color: var(--color-background) !important;
+    transition: color 0.3s ease !important;
+    max-width: 250px !important;
+    white-space: pre-line !important;
+  }
+  
+  .contact-mobile-text:hover {
+    color: #E8B4B8 !important;
+  }
+  
+  .contact-page .hero .hero__subtitle {
+    display: none !important; /* Cache le texte original sur mobile */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
 }
 
 .hero__scroll {
@@ -678,7 +973,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
     background-color: #F4D1D5;
     color: var(--color-text);
-    padding: 1px 0 0 0;
+    padding: 20px 0 20px 0;
     margin-top: 0 !important;
 }
 
@@ -2780,6 +3075,46 @@ h1, h2, h3, h4, h5, h6 {
   .nav__menu.active ~ .slider-mobile-text,
   .nav__toggle.active ~ .slider-mobile-text {
     display: none !important;
+  }
+}
+
+/* Styles pour le titre Voyage en Inde */
+.titre-voyage-inde {
+    margin: 10px auto 0px auto;
+}
+
+@media (max-width: 768px) {
+    .titre-voyage-inde {
+        margin: 0px auto 0px auto;
+    }
+    
+    /* Réduire le padding du bloc texte principal sur mobile */
+    .retraite-description {
+        margin: 5px auto !important;
+        padding: 0 2px !important;
+    }
+    
+    /* Réduire la marge du sous-titre sur mobile */
+    .titre-voyage-inde p {
+        margin-bottom: 0.2rem !important;
+    }
+    
+    /* Saut de ligne après "régénérante" en mobile pour la cuisine */
+    .titre-voyage-inde p.cuisine-sous-titre {
+        white-space: pre-line;
+    }
+    
+      .titre-voyage-inde p.cuisine-sous-titre::after {
+    content: "\A";
+    white-space: pre;
+  }
+  
+  /* Alignement à gauche en haut pour le texte du slider sur mobile uniquement */
+  .hero__subtitle {
+    text-align: left !important;
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
   }
 }
 

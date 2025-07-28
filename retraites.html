@@ -100,7 +100,7 @@
   }
 </style>
 </head>
-<body>
+<body class="retraites-page">
     <!-- Flèche flottante pour remonter en haut de la page -->
     <button id="scrollTopBtn" aria-label="Remonter en haut">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,8 +138,9 @@
             <div class="hero__content">
                 <p class="hero__subtitle" style="white-space:nowrap; overflow:auto;">Une retraite holistique à Ibiza et en Inde, une parenthèse précieuse pour rééquilibrer corps et esprit.</p>
             </div>
-            <div class="slider-mobile-text">
-                Une retraite holistique à Ibiza et en Inde, une parenthèse<br>précieuse pour rééquilibrer corps et esprit.
+            <!-- Texte spécifique pour mobile en haut à gauche -->
+            <div class="retraites-mobile-text" style="position: absolute; top: 80px; left: 20px; z-index: 10; color: white; font-size: 16px; font-family: 'Inter', sans-serif; display: none;">
+                Une retraite holistique à Ibiza et en Inde, une parenthèse précieuse pour rééquilibrer corps et esprit.
             </div>
         </section>
 
@@ -293,6 +294,12 @@
             <div class="container">
                 <!-- Grille de photos style capture -->
                 
+                <!-- Titre déplacé entre section et carrousel -->
+                <div style="text-align: center; max-width: 1200px; margin: 10px auto 0px auto; padding: 0 0px;" class="titre-voyage-inde">
+                    <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-text); font-family: 'Inter', sans-serif;">La Retraite Ibiza</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-text); font-family: 'Inter', sans-serif;">12 mai 2025, 10:00 – 16 mai 2025, 20:00<br>Ibiza, Baléares, Espagne</p>
+                </div>
+                
                 <!-- Premier carrousel avec 2 lignes de 8 photos chacune -->
                 <div class="retraite-old-carousel" style="overflow-x: auto; white-space: nowrap; margin: 0;">
                     <div style="display: inline-flex; flex-direction: column; gap: 0; line-height: 0; font-size: 0;">
@@ -328,29 +335,25 @@
                 </div>
                 
                 <!-- Bloc texte centré -->
-                <div style="text-align: left; max-width: 1200px; margin: 40px auto; padding: 0 20px; font-family: 'Inter', sans-serif;">
-                    <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif;">La Retraite Ibiza</h2>
+                <div style="text-align: center; max-width: 1200px; margin: 40px auto; padding: 0 20px; font-family: 'Inter', sans-serif;">
                     
-                    <p style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-text); font-family: 'Inter', sans-serif;">12 mai 2025, 10:00 – 16 mai 2025, 20:00</p>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--color-text); font-family: 'Inter', sans-serif;">Ibiza, Baléares, Espagne</p>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif; text-align: center;">À propos de l'événement</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); font-family: 'Inter', sans-serif; text-align: center;">Une retraite holistique à Ibiza : yoga, méditation & pranayama</p>
                     
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif;">À propos de l'événement</h3>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); font-family: 'Inter', sans-serif;">Une retraite holistique à Ibiza : yoga, méditation & pranayama</p>
-                    
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; text-align: center;">
                         Offrez-vous cinq jours de transformation à travers Hatha Yoga, Kundalini Yoga et méditation, dans l'écrin naturel et apaisant d'Ibiza.
                     </p>
                     
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; text-align: center;">
                         Une parenthèse précieuse pour rééquilibrer corps et esprit, se reconnecter à soi-même et à la nature, tout en cultivant une alimentation consciente et régénérante.
                     </p>
                     
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; text-align: center;">
                         C'est aussi l'occasion d'explorer ou de redécouvrir Ibiza, son énergie vibrante et sa beauté sauvage préservée.
                     </p>
                     
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif;">Au programme :</h3>
-                    <ul style="text-align: left; max-width: 600px; margin: 0 auto 2rem auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif; text-align: center;">Au programme :</h3>
+                    <ul style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Des marches méditatives en pleine nature pour se recentrer et éveiller les sens</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Des sessions de yoga uniques dans des grottes, en connexion avec l'énergie tellurique du lieu</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Des exercices de respiration (Wim Hof et Pranayama) pour renforcer le mental, libérer les tensions et revitaliser le corps</li>
@@ -360,8 +363,8 @@
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Une cérémonie de cacao en clôture pour l'ouverture du cœur et une connexion profonde</li>
                     </ul>
                     
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif;">Ce qui est inclus :</h3>
-                    <ul style="text-align: left; max-width: 600px; margin: 0 auto 2rem auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif; text-align: center;">Ce qui est inclus :</h3>
+                    <ul style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">5 nuits d'hébergement</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Trois délicieux repas végétariens par jour</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Eau, thés, cafés</li>
@@ -373,8 +376,8 @@
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Transport durant la retraite</li>
                     </ul>
                     
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif;">Ce qui n'est pas inclus :</h3>
-                    <ul style="text-align: left; max-width: 600px; margin: 0 auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-text); font-family: 'Inter', sans-serif; text-align: center;">Ce qui n'est pas inclus :</h3>
+                    <ul style="text-align: center; max-width: 600px; margin: 0 auto; color: var(--color-text); line-height: 1.6; font-family: 'Inter', sans-serif; list-style: none;">
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Les vols aller-retour pour Ibiza</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">Le transport vers et depuis le lieu de la retraite (des taxis sont facilement disponibles à l'aéroport, et la villa se trouve à 20 minutes en voiture)</li>
                         <li style="margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">L'assurance voyage</li>
