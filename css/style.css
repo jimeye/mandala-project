@@ -2941,7 +2941,7 @@ h1, h2, h3, h4, h5, h6 {
   #musicToggle {
     width: 34px;
     height: 34px;
-    bottom: 20px;
+    bottom: 15px;
     left: 12px;
   }
   #musicToggle svg {
