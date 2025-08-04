@@ -228,6 +228,9 @@ h1, h2, h3, h4, h5, h6 {
     .nav__menu {
         gap: 0.5rem;
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .nav__logo {
