@@ -233,6 +233,16 @@ h1, h2, h3, h4, h5, h6 {
     .nav__logo {
         margin-left: 0;
     }
+    
+    /* Agrandissement des sous-menus pour desktop uniquement */
+    .nav__submenu {
+        min-width: 300px;
+    }
+    
+    .nav__submenu-link {
+        font-size: 0.8rem;
+        padding: 5px 0;
+    }
 }
 
 .nav__link {
