@@ -222,12 +222,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Centrage et rapprochement des éléments du menu pour desktop uniquement */
 @media (min-width: 769px) {
     .nav {
-        justify-content: center;
+        justify-content: space-between;
     }
     
     .nav__menu {
         gap: 1rem;
-        margin: 0 auto;
+        margin: 0;
     }
     
     .nav__logo {
