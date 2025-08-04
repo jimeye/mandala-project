@@ -249,19 +249,19 @@ h1, h2, h3, h4, h5, h6 {
     
     /* Couleurs pour desktop et tablette */
     .nav__link {
-        color: #E8B4B8;
+        color: var(--color-background);
     }
     
     .nav__link:hover {
-        color: var(--color-background);
-    }
-    
-    .nav__submenu-link {
         color: #E8B4B8;
     }
     
-    .nav__submenu-link:hover {
+    .nav__submenu-link {
         color: var(--color-background);
+    }
+    
+    .nav__submenu-link:hover {
+        color: #E8B4B8;
     }
 }
 
