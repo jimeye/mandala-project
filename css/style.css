@@ -2,7 +2,7 @@
 :root {
     --color-primary: #E8B4B8;
     --color-text: #333333;
-    --color-background: #f5f1f1;
+    --color-background: #f9f7f2;
     --color-accent: #E8B4B8;
     --color-light: #F9F9F9;
     --font-primary: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -975,7 +975,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text);
     padding: 20px 0 20px 0;
     margin-top: 0 !important;
-    border-top: 5px dotted #333333;
+    border-top: 0.5px solid #f9f7f2;
 }
 
 .footer__content {
@@ -1047,11 +1047,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Style pour tous les liens du footer */
 .footer a {
-    transition: color 0.3s ease;
+    transition: color 0.3s ease !important;
 }
 
 .footer a:hover {
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
+}
+
+/* Style spécifique pour les liens du copyright et webdesign */
+.footer__copyright a,
+.footer__webdesign a {
+    transition: color 0.3s ease !important;
+}
+
+.footer__copyright a:hover,
+.footer__webdesign a:hover {
+    color: var(--color-primary) !important;
 }
 
 .icon {
