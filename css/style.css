@@ -1643,7 +1643,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.9rem;
         color: #E8B4B8;
         font-weight: 400;
-        text-transform: none;
+        text-transform: uppercase;
         letter-spacing: normal;
     }
     
@@ -1659,7 +1659,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1rem;
         padding: 0;
         font-weight: 400;
-        text-transform: none;
+        text-transform: uppercase;
         letter-spacing: normal;
         transition: color 0.3s ease;
     }
