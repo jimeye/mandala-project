@@ -1034,15 +1034,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer__contact a:hover {
-    color: #f5f1f1;
+    color: var(--color-primary);
 }
 
 .footer__social-link:hover {
-    color: #f5f1f1;
+    color: var(--color-primary);
 }
 
 .footer__website a:hover {
-    color: #f5f1f1;
+    color: var(--color-primary);
 }
 
 .icon {
