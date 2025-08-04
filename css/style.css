@@ -228,6 +228,7 @@ h1, h2, h3, h4, h5, h6 {
     background: none;
     letter-spacing: 0.015em;
     text-rendering: optimizeLegibility;
+    text-transform: uppercase;
 }
 
 .nav__link:hover {
@@ -274,6 +275,7 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
     letter-spacing: 0.008em;
     text-rendering: optimizeLegibility;
+    text-transform: uppercase;
 }
 
 .nav__submenu li {
