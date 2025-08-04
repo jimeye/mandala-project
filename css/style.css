@@ -2810,8 +2810,8 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 200px;
     margin: 0 auto;
     padding: 0.7rem 2rem;
-    background-color: #333333;
-    color: var(--color-background);
+    background-color: var(--color-background);
+    color: var(--color-text);
     border: none;
     border-radius: 0;
     font-size: 1.1rem;
