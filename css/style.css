@@ -266,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav__link {
-    color: var(--color-background);
+    color: #E8B4B8;
     text-decoration: none;
     font-weight: 400;
     font-size: 0.8rem;
@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav__link:hover {
-    color: #E8B4B8;
+    color: #FDFCFA;
 }
 
 /* Sous-menus */
@@ -312,7 +312,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav__submenu-link {
     display: block;
     padding: 0;
-    color: var(--color-background);
+    color: #E8B4B8;
     text-decoration: none;
     font-weight: 400;
     transition: all 0.3s ease;
@@ -330,7 +330,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__submenu-link:hover {
     background: none;
-    color: #E8B4B8;
+    color: #FDFCFA;
     padding-left: 0;
 }
 
