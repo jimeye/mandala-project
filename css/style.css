@@ -1,14 +1,16 @@
 /* Variables */
 :root {
-    --color-primary: #E8B4B8;
-    --color-text: #333333;
-    --color-background: #f9f7f2;
-    --color-accent: #E8B4B8;
-    --color-light: #F9F9F9;
+    --color-primary: #D4A5A5;
+    --color-text: #2C2C2C;
+    --color-background: #FDFCFA;
+    --color-accent: #C8A2C8;
+    --color-light: #F8F6F3;
+    --color-secondary: #E6D7C3;
+    --color-dark: #1A1A1A;
     --font-primary: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-secondary: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --transition: all 0.3s ease;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Reset */
@@ -975,7 +977,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text);
     padding: 20px 0 20px 0;
     margin-top: 0 !important;
-    border-top: 0.5px solid #f9f7f2;
+    border-top: 0.5px solid var(--color-secondary);
 }
 
 .footer__content {
