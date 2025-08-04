@@ -1045,6 +1045,15 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-primary);
 }
 
+/* Style pour le lien studio-joseph dans le footer */
+.footer a[href*="joseph-studio.com"] {
+    transition: color 0.3s ease;
+}
+
+.footer a[href*="joseph-studio.com"]:hover {
+    color: var(--color-primary);
+}
+
 .icon {
     width: 24px;
     height: 24px;
