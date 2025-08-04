@@ -243,6 +243,23 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.9rem;
         padding: 8px 0;
     }
+    
+    /* Interversion des couleurs pour desktop et tablette */
+    .nav__link {
+        color: #E8B4B8;
+    }
+    
+    .nav__link:hover {
+        color: var(--color-background);
+    }
+    
+    .nav__submenu-link {
+        color: var(--color-background);
+    }
+    
+    .nav__submenu-link:hover {
+        color: #E8B4B8;
+    }
 }
 
 .nav__link {
