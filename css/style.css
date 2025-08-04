@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__submenu {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 15px);
     left: 0;
     background: none;
     backdrop-filter: none;
