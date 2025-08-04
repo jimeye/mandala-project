@@ -181,22 +181,22 @@ scrollTopBtn.addEventListener('click', () => {
     });
 }); 
 
-// Mélange aléatoire des images dans tous les carrousels
-function shuffleCarousels() {
-  document.querySelectorAll('[class*="carousel"]').forEach(function(carousel) {
-    let lines = Array.from(carousel.children);
-    lines.forEach(function(line) {
-      let photos = Array.from(line.children);
-      for (let i = photos.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [photos[i], photos[j]] = [photos[j], photos[i]];
-      }
-      photos.forEach(function(photo) {
-        line.appendChild(photo);
-      });
-    });
-  });
-}
+// Mélange aléatoire des images dans tous les carrousels - DÉSACTIVÉ
+// function shuffleCarousels() {
+//   document.querySelectorAll('[class*="carousel"]').forEach(function(carousel) {
+//     let lines = Array.from(carousel.children);
+//     lines.forEach(function(line) {
+//       let photos = Array.from(line.children);
+//       for (let i = photos.length - 1; i > 0; i--) {
+//         const j = Math.floor(Math.random() * (i + 1));
+//         [photos[i], photos[j]] = [photos[j], photos[i]];
+//       }
+//       photos.forEach(function(photo) {
+//         line.appendChild(photo);
+//       });
+//     });
+//   });
+// }
 
 // Variables globales pour la navigation lightbox
 let currentCarousel = null;
@@ -358,7 +358,7 @@ function setupLightbox() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  shuffleCarousels();
+  // shuffleCarousels(); // DÉSACTIVÉ - Ordre fixe des photos
   setupLightbox();
 }); 
 
